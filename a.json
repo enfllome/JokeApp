@@ -1,0 +1,103 @@
+{
+  "error": false,
+  "amount": 10,
+  "jokes": [
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "How did the programmer die in the shower?",
+      "delivery": "He read the shampoo bottle instructions: Lather. Rinse. Repeat.",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "safe": false,
+      "id": 266,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "single",
+      "joke": "Two fish in a tank. One turns to the other and says, \"Do you know how to drive this thing?\"",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "id": 185,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Mickey Mouse and Minnie Mouse are in the divorce court.\n\"Mickey\", the judge says, \"I'm sorry. I can't grant you a divorce on the grounds of insanity. Minnie seems quite sane to me.\"",
+      "delivery": "\"I didn't say she was insane\", exclaims Mickey.\n\"I said she was fucking Goofy.\"",
+      "flags": { "nsfw": true, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": true },
+      "id": 225,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "What do dermatologists and the KKK have in common?",
+      "delivery": "They both remove blackheads.",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": true, "sexist": false, "explicit": false },
+      "id": 112,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "Why do programmers confuse Halloween and Christmas?",
+      "delivery": "Because Oct 31 = Dec 25",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "id": 11,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "single",
+      "joke": "I have these weird muscle spasms in my gluteus maximus.\nI figured out from my doctor that everything was alright:\nHe said \"Weird flex, butt okay.\"",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "id": 82,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "How did you make your friend rage?",
+      "delivery": "I implemented a greek question mark in his JavaScript code.",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "id": 147,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "Dark humor is like cancer.",
+      "delivery": "It's more funny when children get it.",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "id": 117,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "joke": "ASCII silly question, get a silly ANSI.",
+      "flags": { "nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false },
+      "id": 25,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "What does a woman's pussy and a chainsaw have in common?",
+      "delivery": "Miss by a few inches and you're in deep shit.",
+      "flags": { "nsfw": true, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": true },
+      "id": 157,
+      "safe": false,
+      "lang": "en"
+    }
+  ]
+}
