@@ -71,6 +71,7 @@ export default {
     return {
       search: "",
       info: [],
+      lsData: [],
     };
   },
   mounted() {
@@ -98,6 +99,26 @@ export default {
         .closest(".svg")
         .querySelector(".path-bg")
         .classList.toggle("done-bg");
+
+      if (
+        !evt.target
+          .closest(".svg")
+          .querySelector(".path-bg")
+          .classList.contains("done-bg")
+      ) {
+        console.log("лайк убран");
+      }
+
+      let text = evt.target
+        .closest(".joke__item")
+        .querySelector(".joke__text").textContent;
+
+      this.lsData.push({
+        joke: text,
+        isLike: true,
+      });
+
+      localStorage.setItem("jokes", JSON.stringify(this.lsData));
     },
   },
 };
