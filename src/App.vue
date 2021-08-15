@@ -59,6 +59,12 @@
         </li>
       </ul>
     </div>
+    <p class="text-center">Сохраненные анекдоты из ls</p>
+    <ul class="list-reset likes">
+      <li v-for="item in getLsData()" :key="item" class="likes__item">
+        {{ item.joke }}
+      </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -119,6 +125,9 @@ export default {
       });
 
       localStorage.setItem("jokes", JSON.stringify(this.lsData));
+    },
+    getLsData() {
+      return JSON.parse(localStorage.getItem("jokes"));
     },
   },
 };
