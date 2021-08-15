@@ -2,19 +2,14 @@
   <div class="container">
     <div class="app">
       <input
-        v-model="keyword"
-        @input="getMatchingResults('wa', jokeFilterList)"
+        v-model="search"
         type="text"
         class="input"
         placeholder="Введите слово для поиска среди анекдотов ..."
       />
       <ul class="list-reset joke-list joke">
-        <li
-          v-for="item in info"
-          :key="item.setup || item.joke"
-          class="joke__item"
-        >
-          <p class="joke__text">{{ item.setup || item.joke }}</p>
+        <li v-for="item in filteredJokes" :key="item" class="joke__item">
+          <p class="joke__text">{{ item }}</p>
           <button @click="setLikes" class="btn-reset joke__btn">
             <svg
               class="svg"
@@ -74,31 +69,26 @@ export default {
 
   data() {
     return {
-      keyword: "",
+      search: "",
       info: [],
-      jokesList: [],
     };
   },
   mounted() {
-    axios
-      .get("https://v2.jokeapi.dev/joke/Any?amount=10")
-      .then((response) => (this.info = response.data.jokes));
+    axios.get("https://v2.jokeapi.dev/joke/Any?amount=10").then((response) => {
+      const data = response.data.jokes;
+      data.forEach((el) => {
+        if ("setup" in el) {
+          this.info.push(el.setup);
+        }
+        if ("joke" in el) {
+          this.info.push(el.joke);
+        }
+      });
+    });
   },
   computed: {
-    // getJokeList() {
-    //   const arr = [];
-    //   this.info.forEach((el) => {
-    //     arr.push(el.setup || el.joke);
-    //   });
-    //   return console.log(arr);
-    // },
-    jokeFilterList() {
-      const arr = [];
-      this.info.forEach((el) => {
-        arr.push(el.setup || el.joke);
-      });
-
-      return arr;
+    filteredJokes() {
+      return this.info.filter((joke) => joke.includes(this.search));
     },
   },
   methods: {
@@ -108,13 +98,6 @@ export default {
         .closest(".svg")
         .querySelector(".path-bg")
         .classList.toggle("done-bg");
-    },
-    getMatchingResults(arr, evt) {
-      return arr.filter((d) =>
-        evt.input.value
-          .split(" ")
-          .every((v) => d.toLowerCase().includes(v.toLowerCase()))
-      );
     },
   },
 };
